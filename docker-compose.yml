@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mstsc:
+    image: ewnchui/mstsc
+    ports:
+      - 8001:1337
+    #command: npm start
+    entrypoint: top -b -d 1000
+    env_file:
+      - ./.env
+      - ../.env
